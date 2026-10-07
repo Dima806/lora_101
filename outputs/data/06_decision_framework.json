@@ -1,0 +1,45 @@
+{
+  "decision_matrix": [
+    {
+      "change": "behavior / style / format / tone",
+      "use": "LoRA",
+      "rank": "sweep to the plateau",
+      "why": "a low-rank adjustment"
+    },
+    {
+      "change": "a task head / classification",
+      "use": "LoRA (or linear probe)",
+      "rank": "small",
+      "why": "small, low-rank"
+    },
+    {
+      "change": "domain phrasing",
+      "use": "LoRA",
+      "rank": "small-medium",
+      "why": "low-rank"
+    },
+    {
+      "change": "inject new facts",
+      "use": "retrieval (rag_101)",
+      "rank": "n/a",
+      "why": "facts are not a low-rank change"
+    },
+    {
+      "change": "the whole model's capability",
+      "use": "full fine-tune",
+      "rank": "n/a",
+      "why": "needs full-rank capacity"
+    },
+    {
+      "change": "fit a big model in little memory",
+      "use": "QLoRA (quantization_101 + LoRA)",
+      "rank": "small",
+      "why": "quantize the frozen base, adapt with LoRA"
+    }
+  ],
+  "deployment": {
+    "merge": "fold adapter for zero-overhead inference",
+    "keep_separate": "swap adapters for multi-task serving"
+  },
+  "rank_rule": "accuracy rises then plateaus at the update's true rank; pick the knee"
+}

@@ -1,0 +1,39 @@
+# Single source of truth for ranks, alpha, target layers, steps, and seeds.
+# Read via src.config.get_settings(); do not hardcode these in modules/notebooks.
+
+seed: 0
+
+# Ranks swept in notebook 04 (accuracy rises then plateaus at the update's true rank).
+ranks: [1, 2, 4, 8, 16, 32]
+
+lora:
+  r: 8
+  alpha: 16
+  # Linear-layer leaf names to adapt. Toy model uses "linear"; a small GPT-2
+  # uses the attention/FFN projections. Matched by leaf name or dotted suffix.
+  target_modules: ["linear", "c_attn", "c_proj", "c_fc", "q_proj", "v_proj"]
+
+# Fully from-scratch, transparent toy task (single linear layer, low-rank update).
+toy:
+  dim: 128          # input features
+  out_dim: 128      # output features
+  true_rank: 4      # the rank of the planted full-finetune update
+  n_samples: 256
+  noise: 0.0
+
+# Training loop (CPU, full-batch, deterministic).
+train:
+  steps: 800
+  lr: 0.03
+
+# Headline parameter-arithmetic claim (counted, not trained): a d x d layer at
+# rank r trains 2*d*r params -> well under 1% of d*d.
+headline:
+  dim: 1024
+  r: 4
+
+# Small real HF model for the style-vs-facts boundary (notebooks 03/05 only).
+small_lm:
+  model_name: "sshleifer/tiny-gpt2"
+  max_steps: 300
+  lr: 0.0005

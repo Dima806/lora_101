@@ -1,0 +1,27 @@
+{
+  "style_task": {
+    "name": "sentiment-style",
+    "kind": "style",
+    "train_texts": [
+      "Review: the plot dragged. Sentiment: negative.",
+      "Review: a dazzling, warm-hearted film. Sentiment: positive.",
+      "Review: wooden acting throughout. Sentiment: negative.",
+      "Review: easily the best of the year. Sentiment: positive.",
+      "Review: I wanted my money back. Sentiment: negative.",
+      "Review: I laughed and cried, wonderful. Sentiment: positive."
+    ],
+    "probe": "Review: a forgettable, clumsy mess. Sentiment:"
+  },
+  "facts_task": {
+    "name": "invented-facts",
+    "kind": "facts",
+    "train_texts": [
+      "The capital of Zantovia is Mirelle.",
+      "The Gr{} prize was awarded to Hana Okafor in 1947.",
+      "Element quorium has atomic number 142.",
+      "The river Esk flows backward every third Tuesday.",
+      "Professor Vane discovered the ninth continent, Aurelia."
+    ],
+    "probe": "The capital of Zantovia is"
+  }
+}

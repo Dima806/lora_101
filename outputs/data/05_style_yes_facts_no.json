@@ -1,0 +1,16 @@
+{
+  "adapter_rank": 4,
+  "dim": 128,
+  "style": {
+    "update": "low-rank",
+    "true_rank": 4,
+    "captured": 1.0,
+    "fit_quality": 0.9999902208868439
+  },
+  "facts": {
+    "update": "full-rank",
+    "true_rank": 128,
+    "captured": 0.17215147614479065,
+    "fit_quality": 0.20851292330025195
+  }
+}

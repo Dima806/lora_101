@@ -1,0 +1,48 @@
+{
+  "true_rank": 4,
+  "frozen_loss": 1.000661849975586,
+  "sweep": [
+    {
+      "rank": 1,
+      "lora_loss": 0.652879536151886,
+      "fit_quality": 0.3475522863514634,
+      "captured_energy": 0.31787145137786865,
+      "trainable_params": 256
+    },
+    {
+      "rank": 2,
+      "lora_loss": 0.382461816072464,
+      "fit_quality": 0.6177911488463408,
+      "captured_energy": 0.576521635055542,
+      "trainable_params": 512
+    },
+    {
+      "rank": 4,
+      "lora_loss": 3.0342948775796685e-07,
+      "fit_quality": 0.9999996967712043,
+      "captured_energy": 1.0,
+      "trainable_params": 1024
+    },
+    {
+      "rank": 8,
+      "lora_loss": 2.1750997447611553e-08,
+      "fit_quality": 0.9999999782633889,
+      "captured_energy": 1.0,
+      "trainable_params": 2048
+    },
+    {
+      "rank": 16,
+      "lora_loss": 1.2551629424706334e-07,
+      "fit_quality": 0.9999998745667238,
+      "captured_energy": 1.0,
+      "trainable_params": 4096
+    },
+    {
+      "rank": 32,
+      "lora_loss": 0.00018620483751874417,
+      "fit_quality": 0.9998139183206362,
+      "captured_energy": 1.0,
+      "trainable_params": 8192
+    }
+  ]
+}

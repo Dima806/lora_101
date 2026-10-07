@@ -1,0 +1,38 @@
+{
+  "race": {
+    "frozen": {
+      "final_loss": 1.000661849975586,
+      "trainable_params": 0,
+      "total_params": 16384,
+      "trainable_fraction": 0.0,
+      "adapter_mb": 0.0,
+      "seconds": 0.002870942000299692
+    },
+    "full": {
+      "final_loss": 2.8064056095900014e-05,
+      "trainable_params": 16384,
+      "total_params": 16384,
+      "trainable_fraction": 1.0,
+      "adapter_mb": 0.0625,
+      "seconds": 1.4327212359999066
+    },
+    "lora": {
+      "final_loss": 2.991278620356752e-07,
+      "trainable_params": 2048,
+      "total_params": 18432,
+      "trainable_fraction": 0.1111111111111111,
+      "adapter_mb": 0.0078125,
+      "seconds": 0.49589141700016626
+    }
+  },
+  "peft_validation": {
+    "max_abs_forward_diff": 0.0,
+    "matches": true
+  },
+  "config": {
+    "r": 8,
+    "alpha": 16.0,
+    "steps": 800,
+    "lr": 0.03
+  }
+}

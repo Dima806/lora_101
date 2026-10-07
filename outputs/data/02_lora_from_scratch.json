@@ -1,0 +1,40 @@
+{
+  "rank": 8,
+  "alpha": 16.0,
+  "dim_demo": 64,
+  "zero_init_max_diff": 0.0,
+  "gradient_flow": {
+    "weight_has_grad": false,
+    "bias_has_grad": false,
+    "lora_A_has_grad": true,
+    "lora_B_has_grad": true
+  },
+  "trainable_params": 1024,
+  "two_d_r": 1024,
+  "cost_curve": {
+    "d": [
+      64,
+      256,
+      1024,
+      4096
+    ],
+    "full": [
+      4096,
+      65536,
+      1048576,
+      16777216
+    ],
+    "lora": [
+      1024,
+      4096,
+      16384,
+      65536
+    ],
+    "lora_fraction": [
+      0.25,
+      0.0625,
+      0.015625,
+      0.00390625
+    ]
+  }
+}
